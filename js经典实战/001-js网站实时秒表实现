@@ -24,7 +24,7 @@
         setInterval(function(){
             dobjt = new Date();
             year = dobjt.getFullYear();
-            month = dobjt.getMonth();
+            month = dobjt.getMonth()+1;//在JavaScript中month是0~11表示12个月。。
             date = dobjt.getDate();
             hour = dobjt.getHours();
             minute = dobjt.getMinutes();
