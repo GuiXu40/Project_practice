@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mytime {
+            width: 100%;
+            font-weight: 700;
+            text-align: center;
+            font-size: 50px;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <p id="mytime">显示时间</p>
+    <script>
+        
+        //alert(src);
+        setInterval(function(){
+            dobjt = new Date();
+            year = dobjt.getFullYear();
+            month = dobjt.getMonth();
+            date = dobjt.getDate();
+            hour = dobjt.getHours();
+            minute = dobjt.getMinutes();
+            second = dobjt.getSeconds();
+
+            src = year+'-'+month +'-'+date+' '+hour+':'+minute+':'+second;
+           // document.title=src;
+           var h1ojc=document.getElementById("mytime");
+           h1ojc.innerHTML=src;
+        },1000);
+       
+    </script>
+</body>
+</html>
