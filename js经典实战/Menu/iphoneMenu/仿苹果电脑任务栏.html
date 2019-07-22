@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .menu {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var menu=document.getElementById("menu");
+        var img=document.getElementsByTagName("img");
+        var arr=[];
+        //保留之前的长度,设置现在的长度
+        for(var i=0;i<img.length;i++){
+            arr.push(img[i].offsetWidth);
+            img[i].width=parseInt(img[i].offsetWidth/2);
+        }
+        //鼠标移动事件
+        window.onmousemove=function(event){
+            var ev=event || window.event ;
+            for(var i=0;i<img.length;i++){
+                var a=event.clientX-img[i].offsetLeft-img[i].offsetWidth/2;
+                var b=event.clientY-menu.offsetTop-img[i].offsetTop-img[i].offsetHeight/2;
+                var iScale=1-Math.sqrt(a*a+b*b)/300;
+                if(iScale<0.5){
+                    iScale=0.5;
+                }
+                img[i].width=arr[i]*iScale;
+            }
+        }
+
+    }
+</script>
+<body>
+    <div class="menu">
+        <img src="images/1.png" alt="">
+        <img src="images/2.png" alt="">
+        <img src="images/3.png" alt="">
+        <img src="images/4.png" alt="">
+        <img src="images/5.png" alt="">
+        <img src="images/6.png" alt="">
+        <img src="images/7.png" alt="">
+        <img src="images/8.png" alt="">
+    </div>
+</body>
+</html>
