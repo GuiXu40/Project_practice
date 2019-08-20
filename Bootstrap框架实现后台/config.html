@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/login.png" alt="" style="width: 20px;">
+                </a>
+                <a href="index.html" class="navbar-brand">后台管理</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">admire <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" >退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="row col-xs-2">
+            <nav class="row navbar navbar-default">
+                <ul class="nav">
+                    <li>
+                        <a class="col-xs-offset-1 " href="index.html"><i class="glyphicon glyphicon-home"></i> 首页</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1 text-muted" href="#"><i class="glyphicon glyphicon-cog"></i> 网站配置</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="admire.html"><i class="glyphicon glyphicon-user"></i> 管理员</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="list.html"><i class="glyphicon glyphicon-list"></i> 商品列表</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="#"><i class="glyphicon glyphicon-picture"></i> 用户列表</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-10">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                    <li> <a href="index.html"></a>首页 </li>
+                    <li class="active">网站配置</li>
+                </ol>
+            </div>
+            <div class="container-fluid">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#index" data-toggle="tab">基础配置</a></li>
+                    <li><a href="#weichat" data-toggle="tab">微信配置</a></li>
+                    <li><a href="#alipay" data-toggle="tab">支付宝配置</a></li>
+                </ul>
+                <form class="form-horizontal" action="">
+                    <div class="tab-content">
+                        <div id="index" class="tab-pane fade in active" style="margin-top: 15px;">
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">网站名</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="前后端网站" value="bootstrap">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">域名</label>
+                                <div class="col-xs-10">
+                                    <input type="url" class="form-control" placeholder="当前网站域名" value="www.guixu.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">网站logo</label>
+                                <div class="col-xs-10">
+                                    <input type="file" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">联系人</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="联系人名字" value="guixu">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">联系人电话</label>
+                                <div class="col-xs-10">
+                                    <input type="phone" class="form-control" placeholder="联系人电话" value="18428022456">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                </div>
+                            </div>
+                        </div>
+                       <div id="weichat" class="tab-pane fade">
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="alipay" class="tab-pane fade">
+                                <div class="form-group">
+                                        <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                        <div class="col-xs-10">
+                                            <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                        <div class="col-xs-10">
+                                            <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-2 control-lable" for="">邮箱</label>
+                                        <div class="col-xs-10">
+                                            <input type="text" class="form-control" placeholder="邮箱" value="29290667689@qq.com">
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <button class="btn btn-success">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/login.png" alt="" style="width: 20px;">
+                </a>
+                <a href="index.html" class="navbar-brand">后台管理</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">admire <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" >退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="row col-xs-2">
+            <nav class="row navbar navbar-default">
+                <ul class="nav">
+                    <li>
+                        <a class="col-xs-offset-1 text-muted" href="index.html"><i class="glyphicon glyphicon-home"></i> 首页</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="config.html"><i class="glyphicon glyphicon-cog"></i> 网站配置</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="admire.html"><i class="glyphicon glyphicon-user"></i> 管理员</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="list.html"><i class="glyphicon glyphicon-list"></i> 商品列表</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="#"><i class="glyphicon glyphicon-picture"></i> 用户列表</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-10">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                    <li> <a href="index.html"></a>首页 </li>
+                    <li class="active">详情</li>
+                </ol>
+            </div>
+            <div class="container-fluid">
+                <div class="col-xs-9">
+                    <div class="col-xs-4">
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge alert-success">19</span>今日新增用户</li>
+                            <li class="list-group-item"><span class="badge alert-success">122</span>7天新增用户</li>
+                            <li class="list-group-item"><span class="badge alert-success">1000</span>一个月新增用户</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge alert-success">19</span>未处理订单</li>
+                            <li class="list-group-item"><span class="badge alert-success">122</span>未发出订单</li>
+                            <li class="list-group-item"><span class="badge alert-success">1000</span>为收货订单</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4">
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="badge alert-success">19</span>今日新增订单</li>
+                            <li class="list-group-item"><span class="badge alert-success">122</span>7天新增订单</li>
+                            <li class="list-group-item"><span class="badge alert-success">1000</span>一个月新增订单</li>
+                        </ul>
+                    </div>
+                    <div class="h5">公告(通知)</div>
+                    <div class="panpel-group">
+                        <div class="panel panel-info">
+                            <div class="panel panel-heading">
+                                <h4 class="panel-title"><a class="collapsed "data-toggle="collapse" href="#not1">通知1</a></h4>
+                            </div>
+                            <div id="not1" class="panel-collapse collapse">
+                                <div class="panel-body">通知内容</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panpel-group">
+                        <div class="panel panel-info">
+                            <div class="panel panel-heading">
+                                <h4 class="panel-title"><a class="collapsed "data-toggle="collapse" href="#not2">通知2</a></h4>
+                            </div>
+                            <div id="not2" class="panel-collapse collapse">
+                                <div class="panel-body">通知内容</div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="panpel-group">
+                        <div class="panel panel-info">
+                            <div class="panel panel-heading">
+                                <h4 class="panel-title"><a class="collapsed "data-toggle="collapse" href="#not3">通知3</a></h4>
+                            </div>
+                           <div id="not3" class="panel-collapse collapse">
+                                <div class="panel-body">通知内容</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <table class="table table-striped">
+                        <caption>服务器信息</caption>
+                        <tr>
+                            <td>当前状态</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>系统版本</td>
+                            <td>Linux</td>
+                        </tr>
+                        <tr>
+                            <td>当前状态</td>
+                            <td>正常</td>
+                        </tr>
+                        <tr>
+                            <td>系统版本</td>
+                            <td>Linux</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

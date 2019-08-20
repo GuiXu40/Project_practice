@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #999">
+    <div class="text-center" style="padding-top: 200px">
+        <div style="width: 714px;margin: 0 auto;background-color: #fff;border-radius: 40px;">
+            <div style="padding: 60px;">
+                <div style="width: 300px;margin: 0 auto;">
+                    <img src="img/login.png" alt="">
+                    <h3>后台管理系统</h3>
+                    <div class="form-group">
+                        <input type="text" id="account" class="form-control" placeholder="请输入账号">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="pwd" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="checkbox">
+                        <label for="">
+                            <input type="checkbox">记住我
+                        </label>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-success">登陆</button>
+                </div>
+                <div id="error" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-centent">
+                            <div class="modal-hrader">
+                                <h4 id="error-title" style="color: #fff;">登陆失败,请重试</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="navbor-fixed-bottom" style="margin-top: 180px;">
+        <p class="text-center">Copyright @ 2019.guixu 后台管理系统</p>
+    </footer>
+</body>
+<script>
+    $("#submit").click(function(){
+        var account=$("#account").val();
+        if(!account){
+            $("#error-title").text('账号不能为空');
+            $("#error").modal('show');
+            setTimeout(function(){
+                $("#error").modal('hide');
+            },1200);
+            return false;
+        }
+        var pwd=$("#pwd").val();
+        if(!pwd){
+            $("#error-title").text('密码不能为空');
+            $("#error").modal('show');
+            setTimeout(function(){
+                $("#error").modal('hide');
+            },1200);
+            return false;
+        }
+        location.href="index.html";
+    })
+</script>
+</html>

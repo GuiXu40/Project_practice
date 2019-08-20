@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/login.png" alt="" style="width: 20px;">
+                </a>
+                <a href="index.html" class="navbar-brand">后台管理</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">admire <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" >退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="row col-xs-2">
+            <nav class="row navbar navbar-default">
+                <ul class="nav">
+                    <li>
+                        <a class="col-xs-offset-1 " href="index.html"><i class="glyphicon glyphicon-home"></i> 首页</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="config.html"><i class="glyphicon glyphicon-cog"></i> 网站配置</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1 " href="admire.html"><i class="glyphicon glyphicon-user"></i> 管理员</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1 text-muted" href="list.html"><i class="glyphicon glyphicon-list"></i> 商品列表</a>
+                    </li>
+                    <li>
+                        <a class="col-xs-offset-1" href="#"><i class="glyphicon glyphicon-picture"></i> 用户列表</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-10">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                    <li> <a href="index.html"></a>首页 </li>
+                    <li class="active">商品列表</li>
+                </ol>
+            </div>
+            <div class="container-fluid">
+                <form class="form-inline col-xs-6" action="admire.html">
+                    <div class="form-group">
+                        <select name="k" id="" class="form-control">
+                            <option value="1">标题</option>
+                            <option value="2">价格</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                        <button class="btn btn-primary">搜索</button>
+                    </div>
+                </form>
+                <button class="btn btn-success pull-right" data-toggle="modal" data-target="#add">新增商品</button>
+                <div class="clearfix"></div>
+                <table class="table table-striped table-bordered" style="margin-top: 20px">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>标题</th>
+                            <th>原件</th>
+                            <th>现价</th>
+                            <th>状态</th>
+                            <th>添加时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>电视机</td>
+                            <td>2000</td>
+                            <td>4000</td>
+                            <td><span class="text-success">销售中</span></td>
+                            <td class="text-center">2019-8-20</td>
+                            <td>
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#edit" onclick="edit('电视机','11','0000','1')">
+                                    修改
+                                </button>
+                                <button class="btn btn-danger btn-xs"data-toggle="modal" data-target="#del" onclick="del(1)">
+                                    删除
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>app</td>
+                            <td>200</td>
+                            <td>100</td>
+                            <td><span class="text-success">销售中</span></td>
+                            <td class="text-center">2019-8-20</td>
+                            <td>
+                               <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#edit" onclick="edit('guixu','桂旭','1111','0')">
+                                    修改
+                                </button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#del" onclick="del(2)">
+                                    删除
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class="text-center">
+                    <ul class="pagination">
+                        <li class="disabled"><a href=""><span>&laquo;</span></a></li>
+                        <li class="active"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li class="disabled"><a href=""><span>&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">新增管理员</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">账号</label>
+                        <input type="text"  name="account" class="form-control" placeholder="请输入账号">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input type="text" name="pwd" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="">真实姓名</label>
+                        <input type="text"  name="name" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="">QQ号</label>
+                        <input type="text" id="" name="qq" class="form-control" placeholder="请输入QQ号">
+                    </div>
+                    <div class="form-group">
+                        <label for="">状态</label>
+                        <select name="status" id="" class="form-control">
+                            <option value="1">开启</option>
+                            <option value="0">关闭</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-success">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">修改管理员</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">账号</label>
+                        <input type="text"  id="account" name="account" class="form-control" placeholder="请输入账号">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input type="text" name="pwd" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="">真实姓名</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="">QQ号</label>
+                        <input type="text" id="qq" name="qq" class="form-control" placeholder="请输入QQ号">
+                    </div>
+                    <div class="form-group">
+                        <label for="">状态</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="1">开启</option>
+                            <option value="0">关闭</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-success">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="del">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">删除管理员</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="body"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button class="btn btn-success">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    function edit(account,name,qq,status){
+        $("#account").val(account);
+        $("#name").val(name);
+        $("#qq").val(qq);
+        $("#status").val(status);
+    }
+
+    function del(id){
+        $("#body").text("确定删除"+id+"条数据？")
+    }
+</script>
+</html>
