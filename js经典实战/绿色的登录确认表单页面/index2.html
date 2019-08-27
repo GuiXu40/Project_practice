@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录框</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+
+</head>
+<body>
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="loginBox">
+			<div class="loginImg">
+				<img src="img/catFace.png" alt="">
+			</div>
+			<div class="input-wrapper">
+				<label>邮箱:</label><br>
+				<input type="email" name="" placeholder="请输入邮箱">
+				<div class="error-email"><div class="email-msg"></div><div class="triangle"></div></div>
+			</div>
+			<div class="input-wrapper">
+				<lable>密码</lable><br>
+				<input type="password" name="" placeholder="请输入密码">
+				<div class="error-pwd"><div class="pwd-msg"></div><div class="triangle"></div></div>
+			</div>
+			<button type="button" onClick="checkInfo()">登陆</button>
+		</div>
+	</div>
+	<div class="confirmation showOk">
+		<img src="img/gato.jpg">
+	</div>
+</body>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/a.js"></script>
+</html>
