@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <style>
+        * {
+            margin: 0;
+            
+        }
+        body {
+            background-color: #eff0f4;
+        }
+        .nav {
+            height: 60px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            background-color: #5fc0cd;
+        }
+        .nav div {
+            text-align: center;
+            line-height: 60px;
+            color: #fff;
+        }
+        .nav_l {
+            position: absolute;
+            left: 20px;
+        }
+        .nav_r {
+            position: absolute;
+            right: 20px;
+        }
+        .login {
+            position: relative;
+            height: 60px;
+            margin-top: 70px;
+            background-color: #fff;
+        }
+        .login2 {
+            margin-top: 10px;
+        }
+        .caret {
+            height: 40px;
+            width: 42px;
+            margin-top: 10px; 
+            display: inline-block;
+            padding-left: 20px;
+            padding-top: 5px;
+            border-right: 1px solid #eff0f4;   
+        }
+        .wenben {
+            position: absolute;
+            left: 85px;
+            top: 14px;
+            width: 55%;
+            padding-top: 5px;  
+            padding-bottom: 5px;  
+            font-size: 20px;
+            outline: none;
+            border:0px; 
+        }
+        .btn {
+            margin-top: 30px;
+            height: 60px;
+            width: 100%;
+            border: 0;
+            line-height: 60px;
+            text-align: center;
+            color: #fff;
+            background-color: #5fc0cd;
+        }
+        .prompt {
+            color: #5fc0cd;
+            text-align: right;
+            margin-top: 5px;
+            padding-right: 15px;  
+        }
+        .prompt a {
+            color: #5fc0cd;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav_l">关闭</div>
+        <div class="nav_r">注册</div>
+        <div>登录</div>
+    </header>
+    <div class="login">
+        <div class="caret">
+            <img src="img/iphone.png" alt="" width="25px">
+        </div>
+        <input type="text" placeholder="请输入手机号" class="wenben">
+    </div>
+    <div class="login login2">
+        <div class="caret">
+            <img src="img/locked 2.png" alt="" width="25px">
+        </div>
+        <input type="text" placeholder="请输入密码" class="wenben">
+    </div>
+    <button class="btn">登录</button>
+    <div class="prompt"><a href="#">忘记密码?</a></div>
+</body>
+</html>
