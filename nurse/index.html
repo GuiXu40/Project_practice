@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%; 
+            background-color: #5fc0cd;
+            text-align: center;
+            z-index: 3;
+        }
+        .exit {
+            position: absolute;
+            left: 10px;
+            top: 18px;
+        }
+        header h3 {
+            color: #fff;
+        }
+        footer {
+            z-index: 3;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            z-index: 3;
+        }
+
+        .message {
+            width: 50%;
+            height: 2.5rem;
+            margin: .4rem;
+            border: .1rem solid #5fc0cd;
+            border-radius: .4rem;
+            line-height: 2.5rem;
+            background: white;
+            color: #5fc0cd;
+        }
+
+        .phone {
+            width: 50%;
+            height: 2.5rem;
+            margin: .4rem .4rem .4rem 0;
+            border: .1rem solid #5fc0cd;
+            border-radius: .4rem;
+            background: #5fc0cd;
+            color: white;
+            line-height: 2.5rem;
+        }
+
+        /* .blank {
+            height: 66rem;
+        } */
+        .container {
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+        }
+        .infomation {
+            height: 180px;
+            width: 100%;
+            background-image: url(img/background.png);
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .por {
+            position: absolute;
+            top: 42px;
+            left: 30px;
+        }
+        .info {
+            position: absolute;
+            top: 28px;
+            left: 138px;
+        }
+        .info h2{
+            color: #fff;
+        }
+        .info p {
+            color: #fff;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #ddd; 
+        }
+        .jineng {
+            position: relative;
+            padding-left: 40px; 
+        }
+        .line0 {
+            position: absolute;
+            top: 1px;
+            left: 20px;
+        }
+        .star {
+            padding: 10px 1px 12px 20px;
+            position: relative;
+        }
+        .star img {
+            position: relative;
+            top: 4px;
+        }
+        .list {
+            width: 100%;
+            height: 39px;
+            padding-top: 15px;
+        }
+        .list_l {
+            color: #ddd;
+            width: 100px;
+            border-right: 1px solid #ddd;
+            padding-left: 20px;
+            padding-right: 20px;  
+        }
+        .list_r {
+            padding-left: 10px;
+        }
+        .textRed {
+            color: red;
+        }
+        .block {
+            height: 1000px;
+        }
+        .list4 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .introduction {
+            color: #ddd;
+            border-right: 1px solid #ddd;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-shrink:0;
+        }
+        .detail {
+            padding-left: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="exit">
+            <img src="img/exit.png" alt="" width="15px">
+        </div>
+        <h3>个人主页</h3>
+    </header>
+    <main>
+        <div class="container">
+            <img src="img/portrait.png" alt="" width="90px;" class="por">
+            <div class="infomation">
+                <div class="info">
+                    <h2> 徐士林 55岁</h2>
+                    <p>
+                        <img src="img/location.png" alt="" width="20px">
+                        京城.四方.报纸林
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="jineng">
+                <img src="img/line.png" alt="" class="line0">    
+                专业技能
+            </h3>
+            <div class="line"></div>
+            <div class="star">
+                <img src="img/star.png" alt="">
+                住家 &nbsp; &nbsp;
+                <img src="img/star.png" alt="">
+                不含餐
+            </div>
+            <div class="line"></div>
+            <div class="list1 list">
+                <span class="list_l">从业年限</span>
+                <span class="list_r">0-3年</span>
+            </div>
+            <div class="line"></div>
+            <div class="list2 list">
+                <span class="list_l">工作时间</span>
+                <span class="list_r">全天</span>
+            </div>
+            <div class="line"></div>
+            <div class="list3 list">
+                <span class="list_l">服务价格</span>
+                <span class="list_r textRed">25元/小时</span>
+            </div>
+            <div class="line"></div>
+            <div class="list4">
+                <span class="introduction ">自我介绍</span>
+                <span class="detail ">可以洗衣、做饭、照顾老人。可以洗衣、做饭、照顾老人。可以洗衣、做饭、照顾老人。可以洗衣、做饭、照顾老人。</span>                
+            </div>
+            <div class="line"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="message">留言</div>
+        <div class="phone">电话联系</div>
+    </footer>
+    <div class="block"></div>
+</body>
+</html>
