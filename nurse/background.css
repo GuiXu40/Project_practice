@@ -1,0 +1,43 @@
+.home {
+    width: 94px;
+    height: 94px;
+    background-position: -0px -0px;
+}
+
+.icon-1 {
+    width: 42px;
+    height: 44px;
+    background-position: -0px -94px;
+}
+
+.icon-5 {
+    width: 42px;
+    height: 41px;
+    background-position: -140px -0px;
+}
+
+.icon-4 {
+    background-image: url(img2/background.png);
+    width: 46px;
+    height: 40px;
+    background-position: -94px -1px;
+}
+
+.icon-2 {
+    width: 24px;
+    height: 24px;
+    background-position: -182px -0px;
+}
+
+.icon-3 {
+    width: 19px;
+    height: 23px;
+    background-position: -206px -0px;
+}
+
+.icon-icon {
+    width: 13px;
+    height: 8px;
+    background-position: -225px -1px;
+}
+

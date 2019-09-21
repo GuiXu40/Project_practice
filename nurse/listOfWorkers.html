@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>护工列表主页</title>
+    <link rel="stylesheet" href="background.css">
+    <style>
+        body {
+            margin: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            background-color: #5fc0cd;
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            z-index: 2;
+        }
+        header>button {
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #55a8b3;
+            border: 0;
+        }
+        header>button:hover {
+            background-color: #fff;
+            color: #5fc0cd;
+        }
+        header>div {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            background-image: url(img2/background.png); 
+            transform: scale(0.5,0.5);
+        }
+        .nav {
+            position: fixed;
+            top: 48px;
+            height: 48px;
+            width: 100%;
+            margin: 0px;
+            padding: 0;
+            z-index: 2;
+        }
+        .nav>li {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            line-height: 48px;
+            background-color: #fff;
+        }
+        .nav li div:hover {
+            background-color: #5fc0cd;
+        }
+        .nav li div {
+            border-right: 1px solid #999;
+        }
+        .nav li ul {
+            padding: 0;
+            display: none;
+        }
+        .nav li:hover ul{
+            display: block;
+            box-shadow: 0 0 5px #999;
+        }
+        .nav li ul li:hover{
+            background: #55a8b3;
+        }
+        main {
+            margin-top: 96px;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            z-index: -1;
+        }
+        .info {
+            height: 100px;
+            border-top: 1px solid #999;
+            width: 100%;
+            padding: 0 15px;
+        }
+        .info>div {
+            height: 33.3%;
+            width: 100%;
+            position: relative;
+        }
+        .info>div {
+            color: #999;
+        }
+        .date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 26px; 
+            font-size: 15px;
+        }
+        .date_l {
+            color: black;
+        }
+        .date_r {
+            color: red;
+            margin-right: 50px; 
+        }
+        .date_r>span {
+            color: #5fc0cd;
+        }
+        .icon-2 {
+            background-image: url(img2/background.png);
+            display: inline-block; 
+            transform: scale(0.5,0.5);
+            position: relative;
+            top: 5px;
+            left: 2px;
+        }
+        .icon-3 {
+            background-image: url(img2/background.png); 
+            display: inline-block; 
+            transform: scale(0.5,0.5);
+            position: relative;
+            top: 5px;
+            left: 2px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #999;
+            width: 100%;
+            background-color: #fff;
+        }
+        footer>div {
+            width: 50px;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+        .icon-4 {
+            background-image: url(img2/background.png);
+            display: inline-block;
+            box-sizing: border-box;
+            transform: scale(0.5,0.5);
+        }
+        .icon-5 {
+            background-image: url(img2/background.png);
+            display: inline-block;
+            box-sizing: border-box;
+            transform: scale(0.5,0.5);
+        }
+        .home {
+            background-image: url(img2/background.png);
+            display: inline-block;
+            transform: scale(0.5,0.5);
+        }
+        .detail {
+            margin-top: -5px;
+            font-size: 10px;
+            color: #55a8b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button>找雇工</button>
+        <button>找护工</button>
+        <div class="icon-1">
+        </div>
+    </header>
+    <ul class="nav">
+        <li class="">
+            <div>
+                <span>所在地</span>
+            </div>
+            <ul>
+                <li>汉口</li>
+                <li>汉阳</li>
+                <li>武昌</li>
+            </ul>
+        </li>
+        <li>
+            <div><span>食宿</span></div>
+            <ul>
+                <li>包吃</li>
+                <li>包住</li>
+                <li>自理</li>
+            </ul>
+        </li>
+        <li>
+            <div><span>病人情况</span></div>
+            <ul>
+                <li>健康</li>
+                <li>良好</li>
+                <li>较差</li>
+            </ul>
+        </li>
+    </ul>
+    <main>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <span class="icon-2"></span>
+                <span>服务日期</span>
+            </div>
+            <div class="date">
+                <span class="date_l">
+                    2015-7-5至2015-07-12
+                </span>
+                <span class="date_r">
+                    25元/小时
+                    <span>></span>
+                </span>
+            </div>
+            <div>
+                <span class="icon-3"></span>
+                <span>北京·通州·果园</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span class="icon-4"></span><!----->
+            <span class="detail">首页</span>
+        </div>
+        <div class="home"></div>
+        <div>
+            <span class="icon-5"></span>
+            <span class="detail">我的</span>
+        </div>
+    </footer>
+    <div class="tianchong"></div>
+</body>
+</html>
