@@ -24,19 +24,37 @@
             align-items: center;
             z-index: 2;
         }
-        header>button {
+        .div1 {
+            border-radius: 7px;
+        }
+        header div div {
+            position: relative;
+            display: inline-block;
             height: 40px;
+            line-height: 40px;
             color: #fff;
-            border-radius: 5px;
             font-size: 20px;
             background-color: #55a8b3;
             border: 0;
+            margin-right: -10px;
+            padding-left: 10px;
+            padding-right: 10px; 
         }
-        header>button:hover {
+        .btn1 {
+            border-radius: 7px 0 0 7px;
+        }
+        .btn2 {
+            border-radius: 0 7px 7px 0;
+        }
+        header div div:hover {
+            border-radius: 7px;
             background-color: #fff;
             color: #5fc0cd;
         }
-        header>div {
+        .btn1:hover {
+            z-index: 3;
+        }
+        .icon-1 {
             position: absolute;
             top: 2px;
             right: 5px;
@@ -64,6 +82,7 @@
         }
         .nav li div {
             border-right: 1px solid #999;
+            position: relative;
         }
         .nav li ul {
             padding: 0;
@@ -75,6 +94,13 @@
         }
         .nav li ul li:hover{
             background: #55a8b3;
+        }
+        .icon-icon {
+            background-image: url(img2/background.png);
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            top: 20px;
         }
         main {
             margin-top: 96px;
@@ -176,8 +202,10 @@
 </head>
 <body>
     <header>
-        <button>找雇工</button>
-        <button>找护工</button>
+        <div class="div1"> 
+            <div class="btn1">找雇工</div>
+            <div class="btn2">找护工</div>
+        </div>
         <div class="icon-1">
         </div>
     </header>
@@ -185,6 +213,7 @@
         <li class="">
             <div>
                 <span>所在地</span>
+                <span class="icon-icon"></span>
             </div>
             <ul>
                 <li>汉口</li>
@@ -193,7 +222,10 @@
             </ul>
         </li>
         <li>
-            <div><span>食宿</span></div>
+            <div>
+                <span>食宿</span>
+                <span class="icon-icon"></span>
+            </div>
             <ul>
                 <li>包吃</li>
                 <li>包住</li>
@@ -201,7 +233,10 @@
             </ul>
         </li>
         <li>
-            <div><span>病人情况</span></div>
+            <div>
+                <span>病人情况</span>
+                <span class="icon-icon"></span>
+            </div>
             <ul>
                 <li>健康</li>
                 <li>良好</li>
