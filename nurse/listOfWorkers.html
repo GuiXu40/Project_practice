@@ -109,44 +109,45 @@
         .nav2 {
             position: fixed;
             top: 48px;
-            height: 48px;
+            height: 65px;
             width: 100%;
             margin: 0px;
             padding: 0;
             z-index: 2;
+            background-color: #fff;
         }
         .nav2 select {
             /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-            border: solid 1px #000;
             /*很关键：将默认的select选择框样式清除*/
-            appearance:none;
+            /* appearance:none;
             -moz-appearance:none;
-            -webkit-appearance:none;
+            -webkit-appearance:none; */
             /*在选择框的最右侧中间显示小箭头图片*/
-            background: url("img2/icon-icon.png") no-repeat scroll 94% center transparent;
+            background: url(img2/photo8.png) no-repeat right center;
             /*为下拉小箭头留出一点位置，避免被文字覆盖*/
             float: left;
             width: 33%;
-            height: 48px;
-            border: 0px;
-            border-right: 1px solid #999;
-            text-align: center;
-            text-align-last: center;
+            height: 65px;
+            border: none;
+            border-bottom: 1px solid rgb(221, 220, 220);
             color: #999;
+            box-sizing: border-box;
+            padding-left: 9%;
+            font-size: 20px;
         }
         .nav2 .sele3 {
             border-right: 0px;
+            background: none;
         }
         main {
-            margin-top: 96px;
+            margin-top: 112px;
             width: 100%;
-            overflow-y: scroll;
             overflow-x: hidden;
             z-index: -1;
         }
         .info {
             height: 100px;
-            border-top: 1px solid #999;
+            border-top: 0.5px solid rgb(221, 220, 220);
             width: 100%;
             padding: 0 15px;
         }
