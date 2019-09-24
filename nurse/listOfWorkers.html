@@ -44,16 +44,18 @@
             border-radius: 7px 0 0 7px;
         }
         .btn2 {
-            border-radius: 0 7px 7px 0;
+            border-radius: 7px;
+            background-color: #fff;
+            color: #5fc0cd;
         }
-        header div div:hover {
+        /* header div div:hover {
             border-radius: 7px;
             background-color: #fff;
             color: #5fc0cd;
         }
         .btn1:hover {
             z-index: 3;
-        }
+        } */
         .icon-1 {
             position: absolute;
             top: 2px;
@@ -61,7 +63,7 @@
             background-image: url(img2/background.png); 
             transform: scale(0.5,0.5);
         }
-        .nav {
+        /* .nav {
             position: fixed;
             top: 48px;
             height: 48px;
@@ -73,8 +75,8 @@
         .nav>li {
             float: left;
             width: 33.3%;
-            text-align: center;
             line-height: 48px;
+            text-align: center;
             background-color: #fff;
         }
         .nav li div:hover {
@@ -101,6 +103,39 @@
             position: absolute;
             right: 10px;
             top: 20px;
+        } */
+        /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+        select::-ms-expand { display: none; }
+        .nav2 {
+            position: fixed;
+            top: 48px;
+            height: 48px;
+            width: 100%;
+            margin: 0px;
+            padding: 0;
+            z-index: 2;
+        }
+        .nav2 select {
+            /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+            border: solid 1px #000;
+            /*很关键：将默认的select选择框样式清除*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            /*在选择框的最右侧中间显示小箭头图片*/
+            background: url("img2/icon-icon.png") no-repeat scroll 94% center transparent;
+            /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+            float: left;
+            width: 33%;
+            height: 48px;
+            border: 0px;
+            border-right: 1px solid #999;
+            text-align: center;
+            text-align-last: center;
+            color: #999;
+        }
+        .nav2 .sele3 {
+            border-right: 0px;
         }
         main {
             margin-top: 96px;
@@ -201,6 +236,10 @@
         .detail2 {
             color: #999;
         }
+        .tianchong {
+            height: 1000px;
+            border-top: 1px solid #999;
+        }
     </style>
 </head>
 <body>
@@ -212,7 +251,7 @@
         <div class="icon-1">
         </div>
     </header>
-    <ul class="nav">
+    <!-- <ul class="nav">
         <li class="">
             <div>
                 <span>所在地</span>
@@ -246,7 +285,24 @@
                 <li>较差</li>
             </ul>
         </li>
-    </ul>
+    </ul> -->
+    <form action="" class="nav2">
+        <select name="" id="">
+            <option value="所在地">所在地</option>
+            <option value="答复">答复</option>
+            <option value="发送">发送</option>
+        </select>
+        <select name="" id="">
+            <option value="食宿">食宿</option>
+            <option value="包吃">包吃</option>
+            <option value="包住">包住</option>
+        </select>
+        <select name="" id="" class="sele3">
+            <option value="病人情况">病人情况</option>
+            <option value="健康">健康</option>
+            <option value="良好">良好</option>
+        </select>
+    </form>
     <main>
         <div class="info">
             <div>
