@@ -53,6 +53,7 @@ a {
 }
 
 main {
+    position: fixed;
     width: 100%;
     margin-top: 60px;
     background-color: #29bde0; 
@@ -102,6 +103,11 @@ main {
 }
 .main-div2 {
     width: 100%;
+    height: 430px;
+    overflow: scroll;
+}
+.main-div2::-webkit-scrollbar {
+    display: none;
 }
 .main-div2-div1 {
     width: 100%;
@@ -120,21 +126,36 @@ main {
 }
 .main-div2-div1-div1:hover .img-contain {
     display: flex;
-    width: 100%;
+    width: 100px;
     height: 40px;
-    margin-top: 2px;
+    margin-top: 12px;
     justify-content: space-between; 
-}
-.img-contain-focused {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    margin-top: 2px;
-    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 .img-contain img {
-    width: 24%;
-    float: left;
+    width: 23px;
+    height: 23px;
+}
+@media screen and (max-width: 320px) {
+    .main-div2 {
+        width: 140px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        margin-left: -70px;
+    }
+    .main-div2-div1 {
+        width: 100%;
+        flex-wrap: wrap;
+        height: 450px;
+    }
+    .main-div2-div1-div1 {
+        width: 100%;
+        height: 150px;
+    }
+    .main-div2-div1-div1:hover .img-contain {
+        width: 100%;
+    }
 }
 .identity {
     height: 110px;
